@@ -62,7 +62,7 @@ const toggleComplete =(id)=>{
 </Svg>
         <TextInput placeholder='Type here' style={styles.textInput} placeholderTextColor='#007AFB' onChangeText={setTask} value={task} />
   <Pressable onPress={addTask} style={styles.addTask}>
-  <Text >Add</Text>
+  <Text style={styles.addButton}>Add</Text>
 </Pressable>
 
       </View>
@@ -79,7 +79,11 @@ const toggleComplete =(id)=>{
 }
 
 const styles = StyleSheet.create({
-  container: {
+
+addButton:{
+  color:'white',fontSize:16, fontWeight:'bold'
+}
+  ,container: {
     flex: 1,
     backgroundColor:'#C1DFFF' ,
   },
@@ -92,13 +96,15 @@ paddingTop:50,
   navText:{
     fontSize:40,
     fontWeight:'bold',
-  color:'white'},
+  color:'white',
+paddingBottom:10},
 
 textInput:{
   borderRadius:30,
   backgroundColor:'white',
   width:300,
- color:'#007AFB',fontWeight:'bold',
+  height:40,
+ color:'#007AFB',fontWeight:'bold',fontSize:16,
  textAlign:'center',
   shadowColor: '#000',
     shadowOpacity: 0.9,
